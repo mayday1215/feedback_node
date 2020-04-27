@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>留言本</title>
+  <link rel="stylesheet" href="/public/lib/bootstrap/dist/css/bootstrap.css">
+</head>
+
+<body>
+  <div class="header container">
+    <div class="page-header">
+      <h1 class="text-center">留言板</h1>
+    </div>
+  </div>
+  <div class="comments container">
+    <ul class="list-group">
+      {{each comments}}
+      <li class="list-group-item">{{$value.name}}说：{{$value.message}} <span class="float-right">date：{{$value.dateTime}}</span></li>
+      {{/each}}
+    </ul>
+    <a class="btn btn-success float-right" href="/post">发表留言</a>
+  </div>
+</body>
+</html>
